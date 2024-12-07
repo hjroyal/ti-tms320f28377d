@@ -1,16 +1,16 @@
 /**
  * @file app.c
  * @brief
- * @author hjroyal 
+ * @author hj
  * @version 1.0
  * @date 2024-08-31
  *
- * @copyright Copyright (c) 2024  XX鍏徃
+ * @copyright Copyright (c) 2024  XXXX
  *
- * @par 淇敼鏃ュ織:
+ * @par Modification log:
  * <table>
  * <tr><th>Date           <th>Version   <th>Author      <th>Description
- * <tr><td>2024-08-31     <td>1.0       <td>hjroyal     <td>鍐呭
+ * <tr><td>2024-08-31     <td>1.0       <td>hjroyal     <td>DEMO RUN
  * </table>
  */
 
@@ -60,12 +60,12 @@
 #define APP_TASK_LED2_STK_SIZE 160u
 #define APP_TASK_BEEP_STK_SIZE 160u
 
-#pragma DATA_SECTION(AppTaskLed1TCB, "RAMM1");
-#pragma DATA_SECTION(AppTaskLed1Stk, "RAMM1");
-#pragma DATA_SECTION(AppTaskLed2TCB, "RAMM1");
-#pragma DATA_SECTION(AppTaskLed2Stk, "RAMM1");
-#pragma DATA_SECTION(AppTaskBeepTCB, "RAMM1");
-#pragma DATA_SECTION(AppTaskBeepStk, "RAMM1");
+#pragma DATA_SECTION(AppTaskLed1TCB, "TASK_STK_RAM");
+#pragma DATA_SECTION(AppTaskLed1Stk, "TASK_STK_RAM");
+#pragma DATA_SECTION(AppTaskLed2TCB, "TASK_STK_RAM");
+#pragma DATA_SECTION(AppTaskLed2Stk, "TASK_STK_RAM");
+#pragma DATA_SECTION(AppTaskBeepTCB, "TASK_STK_RAM");
+#pragma DATA_SECTION(AppTaskBeepStk, "TASK_STK_RAM");
 /*
 **************************************************************
 *                               TCB
@@ -317,7 +317,7 @@ void GPIO_Setup(void)
     GPIO_SetupPinOptions(5, GPIO_OUTPUT, GPIO_PUSHPULL);
 
     //beep
-    GPIO_SetupPinMux(30, GPIO_MUX_CPU1, 0);
+    GPIO_SetupPinMux(30, GPIO_MUX_CPU1, 1);
     GPIO_SetupPinOptions(30, GPIO_OUTPUT, GPIO_PUSHPULL);
 
     //relay

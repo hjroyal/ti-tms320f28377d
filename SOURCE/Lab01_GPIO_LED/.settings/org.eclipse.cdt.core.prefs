@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CCS_INSTALL_DIR/delimiter=;
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CCS_INSTALL_DIR/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CCS_INSTALL_DIR/value=C\:\\ti\\ccs1280\\ccs
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CG_TOOL_ROOT/delimiter=;
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CG_TOOL_ROOT/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CG_TOOL_ROOT/value=C\:\\ti\\complier\\ti-cgt-c2000_20.2.2.LTS
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/append=true
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/appendContributed=true
