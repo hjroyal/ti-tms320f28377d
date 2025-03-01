@@ -1,0 +1,22 @@
+{
+  "folders": [
+    {
+      "path": "file:///d%3A/code/myprj/28377d/TMS320F28377D-UCOS3-CPU1"
+    }
+  ],
+  "settings": {},
+  "launch": {
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "TMS320F28377D-CPU1",
+        "type": "ccs-debug",
+        "request": "launch",
+        "projectInfo": {
+          "name": "TMS320F28377D-CPU1",
+          "resourceId": "/TMS320F28377D-CPU1"
+        }
+      }
+    ]
+  }
+}

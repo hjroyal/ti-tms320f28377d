@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>TMS320F28377D</name>
+	<name>TMS320F28377D-CPU1</name>
 	<comment></comment>
 	<projects>
 	</projects>
@@ -24,4 +24,14 @@
 		<nature>org.eclipse.cdt.core.ccnature</nature>
 		<nature>org.eclipse.cdt.managedbuilder.core.ScannerConfigNature</nature>
 	</natures>
+	<variableList>
+		<variable>
+			<name>C2000_CG_ROOT</name>
+			<value>file:/C:/ti/complier/ti-cgt-c2000_20.2.2.LTS</value>
+		</variable>
+		<variable>
+			<name>CCE_INSTALL_ROOT</name>
+			<value>file:/C:/ti/ccs2002/ccs</value>
+		</variable>
+	</variableList>
 </projectDescription>

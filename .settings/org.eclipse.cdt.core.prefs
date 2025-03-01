@@ -1,0 +1,9 @@
+eclipse.preferences.version=1
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CWD/delimiter=;
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CWD/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/CWD/value=D\:\\code\\myprj\\28377d\\TMS320F28377D-UCOS3-CPU1\\Debug
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/PWD/delimiter=;
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/PWD/operation=replace
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/PWD/value=D\:\\code\\myprj\\28377d\\TMS320F28377D-UCOS3-CPU1\\Debug
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/append=true
+environment/project/com.ti.ccstudio.buildDefinitions.C2000.Debug.1850642100/appendContributed=true

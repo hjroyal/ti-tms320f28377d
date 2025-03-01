@@ -1,2 +1,0 @@
-cd .\Debug\
-gmake -k -j 8 all -O

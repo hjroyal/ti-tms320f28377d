@@ -51,6 +51,10 @@
 
 //beep
 #define BEEP_TOGGLE GpioDataRegs.GPATOGGLE.bit.GPIO30 = 1
+
+//relay
+#define RELAY_TOGGLE GpioDataRegs.GPCTOGGLE.bit.GPIO67 = 1
+
 /*
 *************************************************************************
 *                            USER STACK SIZE
@@ -110,6 +114,23 @@ void main(void)
     OS_ERR err;
 
     InitSysCtrl();
+
+//    #ifdef _STANDALONE
+//    #ifdef _FLASH
+//    // Send boot command to allow the CPU2 application to begin execution
+//    IPCBootCPU2(C1C2_BROM_BOOTMODE_BOOT_FROM_FLASH);
+//    #else
+//    // Send boot command to allow the CPU2 application to begin execution
+//    IPCBootCPU2(C1C2_BROM_BOOTMODE_BOOT_FROM_RAM);
+//    #endif
+//    #endif
+
+//    // Call Flash Initialization to setup flash waitstates
+//    // This function must reside in RAM
+//    #ifdef _FLASH
+//    InitFlash();
+//    #endif
+
 
     InitGpio();
     GPIO_Setup();
@@ -241,10 +262,11 @@ static void AppTaskLed2(void *p_arg)
         
         LED3_TOGGLE; 
         LED4_TOGGLE; 
-        GpioDataRegs.GPCTOGGLE.bit.GPIO67 = 1;
+
+
         EDIS;
 
-        OSTimeDly(3000, OS_OPT_TIME_DLY, &err);
+        OSTimeDly(1000, OS_OPT_TIME_DLY, &err);
     }
 }
 
@@ -259,9 +281,14 @@ static void AppTaskBeep(void *p_arg)
     while (DEF_TRUE) 
     {
         EALLOW;
+
+
         LED5_TOGGLE;
-        LED6_TOGGLE; 
-        BEEP_TOGGLE;
+        LED6_TOGGLE;
+
+//        RELAY_TOGGLE;
+//        BEEP_TOGGLE;
+
         EDIS;
 
         OSTimeDly(5000, OS_OPT_TIME_DLY, &err);
@@ -317,8 +344,8 @@ void GPIO_Setup(void)
     GPIO_SetupPinOptions(5, GPIO_OUTPUT, GPIO_PUSHPULL);
 
     //beep
-    GPIO_SetupPinMux(30, GPIO_MUX_CPU1, 1);
-    GPIO_SetupPinOptions(30, GPIO_OUTPUT, GPIO_PUSHPULL);
+//    GPIO_SetupPinMux(30, GPIO_MUX_CPU1, 0);
+//    GPIO_SetupPinOptions(30, GPIO_OUTPUT, GPIO_PUSHPULL);
 
     //relay
     GPIO_SetupPinMux(67, GPIO_MUX_CPU1, 0);
